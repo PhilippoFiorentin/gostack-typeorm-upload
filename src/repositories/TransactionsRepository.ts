@@ -29,14 +29,6 @@ class TransactionsRepository extends Repository<Transaction> {
 
     return balance;
   }
-
-  public async findBySameCategory(
-    category_id: string,
-  ): Promise<Transaction | null> {
-    const transactionCategory = await this.findOne({ where: { category_id } });
-
-    return transactionCategory || null;
-  }
 }
 
 export default TransactionsRepository;
