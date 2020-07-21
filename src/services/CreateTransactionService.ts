@@ -1,14 +1,11 @@
-import {
-  getCustomRepository,
-  getRepository,
-  TransactionRepository,
-} from 'typeorm';
+import { getCustomRepository, getRepository } from 'typeorm';
 
 // import AppError from '../errors/AppError';
 
 import Transaction from '../models/Transaction';
 import Category from '../models/Category';
 import TransactionsRepository from '../repositories/TransactionsRepository';
+import AppError from '../errors/AppError';
 
 interface Request {
   title: string;
@@ -27,6 +24,12 @@ class CreateTransactionService {
     const transactionsRepository = getCustomRepository(TransactionsRepository);
 
     const categories = getRepository(Category);
+
+    const { total } = await transactionsRepository.getBalance();
+
+    if (type === 'outcome' && total < value) {
+      throw new AppError('Outcome value is bigger than total', 400);
+    }
 
     // Se EXISTIR uma categoria, a variável category será atribuída ao title.
     let transactionCategory = await categories.findOne({
