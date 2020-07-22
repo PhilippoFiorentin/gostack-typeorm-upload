@@ -436,6 +436,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@octetstream/promisify@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@octetstream/promisify/-/promisify-2.0.2.tgz#29ac3bd7aefba646db670227f895d812c1a19615"
+  integrity sha512-7XHoRB61hxsz8lBQrjC1tq/3OEIgpvGWg6DKAdwi7WRzruwkmsdwmOoUXbU4Dtd4RSOMDwed0SkP3y8UlMt1Bg==
+
 "@sinonjs/commons@^1.7.0":
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.7.2.tgz#505f55c74e0272b43f6c52d81946bed7058fc0e2"
@@ -607,6 +612,13 @@
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.19.1.tgz#33509849f8e679e4add158959fdb086440e9553f"
   integrity sha512-5qOlnZscTn4xxM5MeGXAMOsIOIKIbh9e85zJWfBRVPlRMEVawzoPhINYbRGkBZCI8LxvBe7tJCdWiarA99OZfQ==
+
+"@types/promise-fs@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@types/promise-fs/-/promise-fs-2.1.0.tgz#fdfe6e41fb016ca72eebf7448f59155cb5320965"
+  integrity sha512-VT6N1MAzkFnAzDJweDbV5zQQkH+k0GlbiZ3Dx7U0RpzuiwJuN1tIKQ1ordFYH/DbrsFtD9HU2E6svdfydZN3jQ==
+  dependencies:
+    "@types/node" "*"
 
 "@types/qs@*":
   version "6.9.1"
@@ -1442,10 +1454,15 @@ cssstyle@^2.0.0:
   dependencies:
     cssom "~0.3.6"
 
-csv-parse@*, csv-parse@^4.8.8:
+csv-parse@*:
   version "4.8.8"
   resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.8.8.tgz#0acbc4598c1f28652c4250599108096b3a0a68ae"
   integrity sha512-Kv3Ilz2GV58dOoHBXRCTF8ijxlLjl80bG3d67XPI6DNqffb3AnbPbKr/WvCUMJq5V0AZYi6sukOaOQAVpfuVbg==
+
+csv-parse@^4.11.1:
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.11.1.tgz#3935a7862d7e431020a25538905dec0153fa75bd"
+  integrity sha512-cH2BG5Gd0u4G8qVI/jGXJSP2+El7Vy91/ZD3ehKALAWids1aIKOPhZ1ZVJzUrs2zTn6aGumVPBlbHsI91kI83A==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -4185,6 +4202,13 @@ progress@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
+
+promise-fs@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/promise-fs/-/promise-fs-2.1.1.tgz#0b725a592c165ff16157d1f13640ba390637e557"
+  integrity sha512-43p7e4QzAQ3w6eyN0+gbBL7jXiZFWLWYITg9wIObqkBySu/a5K1EDcQ/S6UyB/bmiZWDA4NjTbcopKLTaKcGSw==
+  dependencies:
+    "@octetstream/promisify" "2.0.2"
 
 prompts@^2.0.1:
   version "2.3.2"
