@@ -39,6 +39,7 @@ class ImportTransactionsService {
       transactions.push({ title, type, value, category });
     });
 
+    // Quando o evento end for ativado, vai retornar os dados
     await new Promise(resolve => parseCSV.on('end', resolve));
 
     const declaredCategories = await categoriesRepository.find({
